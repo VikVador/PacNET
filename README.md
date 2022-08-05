@@ -4,7 +4,7 @@
 Are you bored of playing Pacman by yourself using your keyboard ? This ends now ! It is time for you to compare yourself against an AI ! Who will win ? Let's find out ! 🕹
 
 ## Illustration
-|     Human     | PacMAN (hminimax)| PacNET (LENET-1)|
+|     PacHUMAN     | PacMAN (hminimax)| PacNET (LENET-1)|
 |:-:|:-:|:-:|
 |![First Image](assets/human.gif)|![Second Image](assets/pacman.gif)|![Second Image](assets/human.gif)|
 
