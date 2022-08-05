@@ -13,7 +13,7 @@ Are you bored of playing Pacman by yourself using your keyboard ? This ends now 
 As of today, PacNET is still a work in progress since the results are not as good as the one obtained by PacMAN
 ## Installation
 
-- First of all, it is **required** to install Python on your computer. If it nos already done, you can do it using the following [link](https://www.python.org/downloads/).
+- First of all, it is **required** to install Python on your computer. If it is not already done, you can do it using the following [link](https://www.python.org/downloads/).
 
 - Furthermore, it is needed to install the [*PyTorch*](https://pytorch.org) library as well as [*Numpy*](https://numpy.org). In order to do so, simply execute the command
 
