@@ -44,13 +44,28 @@ echo "\n"
 # Generating data on the different maps
 #
 # MAP 1
-for((i = 1 ; i <= 30 ; i++))
+for((i = 1 ; i <= 10 ; i++))
 do
         python3 run.py --agentfile PacMAN.py --ghostagent dumby  --generate 1 --layout map_1 --silentdisplay
         python3 run.py --agentfile PacMAN.py --ghostagent greedy --generate 1 --layout map_1 --silentdisplay
         python3 run.py --agentfile PacMAN.py --ghostagent smarty --generate 1 --layout map_1 --silentdisplay
 done
 
+# MAP 2
+for((i = 1 ; i <= 10 ; i++))
+do
+        python3 run.py --agentfile PacMAN.py --ghostagent dumby  --generate 1 --layout map_2 --silentdisplay
+        python3 run.py --agentfile PacMAN.py --ghostagent greedy --generate 1 --layout map_2 --silentdisplay
+        python3 run.py --agentfile PacMAN.py --ghostagent smarty --generate 1 --layout map_2 --silentdisplay
+done
+
+# MAP 3
+for((i = 1 ; i <= 10 ; i++))
+do
+        python3 run.py --agentfile PacMAN.py --ghostagent dumby  --generate 1 --layout map_3 --silentdisplay
+        python3 run.py --agentfile PacMAN.py --ghostagent greedy --generate 1 --layout map_3 --silentdisplay
+        python3 run.py --agentfile PacMAN.py --ghostagent smarty --generate 1 --layout map_3 --silentdisplay
+done
 
 # Terminal UI (2)
 clear

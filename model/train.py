@@ -39,13 +39,13 @@ import torch.optim as optim
 # 
 #----------------------------------------------------------
 # Number of epochs
-nb_epoch = 2000
+nb_epoch = 100
 
 # Size of the bach in the dataloader
 batch_size = 64
 
 # Learning rate of the training
-learning_rate = 0.0002
+learning_rate = 0.001
 
 # Define the percentage of the complete dataset that will be used as a train set
 train_size  = 95

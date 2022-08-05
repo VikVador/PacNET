@@ -18,9 +18,9 @@ Feeling like playing a Pacman Game ?
 
 import random
 
-from pacman_module.game import Agent
-from pacman_module.pacman import Directions
-from pacman_module.graphicsUtils import keys_waiting, keys_pressed
+from module.game import Agent
+from module.pacman import Directions
+from module.graphicsUtils import keys_waiting, keys_pressed
 
 
 class PacmanAgent(Agent):
@@ -41,7 +41,7 @@ class PacmanAgent(Agent):
         self.lastMove = Directions.STOP
         self.keys = []
 
-    def get_action(self, state):
+    def get_action(self, state, generate_Data):
         """
         Given a pacman game state, returns a legal move.
 
@@ -73,7 +73,6 @@ class PacmanAgent(Agent):
         self.lastMove = move
 
         x = state.getPacmanPosition()
-        print(str(x))
         return move
 
     def _get_move(self, legal):

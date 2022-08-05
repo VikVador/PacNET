@@ -52,7 +52,7 @@ class PacNET(nn.Module):
         super().__init__()
 
         # Layer - 1
-        self.conv_1 = nn.Conv2d(in_channels = 1, out_channels = 32, padding = 1, kernel_size = (3,3))
+        self.conv_1 = nn.Conv2d(in_channels = 1, out_channels = 32, padding = 1, stride = 1, kernel_size = (4,4))
         self.pool_1 = nn.MaxPool2d(2, 2)
 
         # Layer - 2
@@ -60,7 +60,7 @@ class PacNET(nn.Module):
         self.pool_2 = nn.MaxPool2d(2, 2)
 
         # Fully connected layers
-        self.fc1 = nn.Linear(256, 128)
+        self.fc1 = nn.Linear(192, 128)
         self.fc2 = nn.Linear(128, 64)
         self.fc3 = nn.Linear(64, 4)
 

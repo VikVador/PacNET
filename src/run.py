@@ -34,15 +34,15 @@ if __name__ == '__main__':
     parser.add_argument(
         '--agentfile',
         help='Python file containing a `PacmanAgent` class.',
-        default="PacMAN.py")
+        default="PacHUMAN.py")
     parser.add_argument(
         '--ghostagent',
         help='Ghost agent available in the `ghostAgents` module.',
-        choices=["dumby", "greedy", "smarty", "rightrandy"], default="smarty")
+        choices=["dumby", "greedy", "smarty", "rightrandy"], default="greedy")
     parser.add_argument(
         '--layout',
         help='Maze layout (from layout folder).',
-        default="map_2.lay")
+        default="map_1.lay")
     parser.add_argument(
         '--nghosts',
         help='Maximum number of ghosts in a maze.',
