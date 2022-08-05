@@ -3,6 +3,11 @@
 # PacNET
 Are you bored of playing Pacman by yourself using your keyboard ? This ends now ! It is time for you to compare yourself against an AI ! Who will win ? Let's find out ! 🕹
 
+## Illustration
+|     Human     | PacMAN (hminimax)| PacNET (LENET-1)|
+|:-:|:-:|:-:|
+|![First Image](https://images.pexels.com/photos/585759/pexels-photo-585759.jpeg?h=750&w=1260)|![Second Image](https://images.pexels.com/photos/1335115/pexels-photo-1335115.jpeg?h=750&w=1260)|![Second Image](https://images.pexels.com/photos/1335115/pexels-photo-1335115.jpeg?h=750&w=1260)|
+
 ## Installation
 
 - First of all, it is **required** to install Python on your computer. If it nos already done, you can do it using the following [link](https://www.python.org/downloads/).
