@@ -74,7 +74,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Terminal UI
-    PacNET_Logo()
+    if args.generate == 0:
+        PacNET_Logo()
 
     # Loading the Pacman agent
     agent = load_agent_from_file("agents/" + args.agentfile, "PacmanAgent")(args)
@@ -91,7 +92,8 @@ if __name__ == '__main__':
     layout = "module/layouts/" + args.layout
 
     # Terminal UI
-    PacNET_Game(args.agentfile)
+    if args.generate == 0:
+        PacNET_Game(args.agentfile)
 
     # Runnning the game
     total_score, total_computation_time, total_expanded_nodes = runGame(layout, agent, gagts, 

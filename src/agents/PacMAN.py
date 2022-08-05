@@ -327,7 +327,7 @@ class PacmanAgent(Agent):
                 ft = np.random.randint(2, size=1)
 
                 if ft == 1:
-                    return move #movements[nb_move[0]]
+                    return movements[nb_move[0]]
                 else:
                     return move
             else:

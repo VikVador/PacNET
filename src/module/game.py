@@ -723,7 +723,7 @@ class Game:
             ###self.display.update( self.state.makeObservation(idx).data )
 
             # Allow for game specific conditions (winning, losing, etc.)
-            self.rules.process(self.state, self)
+            self.rules.process(self.state, generate_Data, self)
             # Track progress
             if agentIndex == numAgents + 1:
                 self.numMoves += 1

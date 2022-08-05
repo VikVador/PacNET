@@ -355,21 +355,23 @@ class ClassicGameRules:
 		self.quiet = quiet
 		return game
 
-	def process(self, state, game):
+	def process(self, state, generate_Data, game):
 		"""
 		Checks to see whether it is time to end the game.
 		"""
 		if state.isWin():
-			self.win(state, game)
+			self.win(state, generate_Data, game)
 		if state.isLose():
-			self.lose(state, game)
+			self.lose(state, generate_Data, game)
 
-	def win(self, state, game):
-		print("Pacman has won over the ghost!\n\n")
+	def win(self, state, generate_Data, game):
+		if generate_Data == 0:
+			print("Pacman has won over the ghost!\n\n")
 		game.gameOver = True
 
-	def lose(self, state, game):
-		print("The ghost has absorbed Pacman's soul... You died...\n\n")
+	def lose(self, state, generate_Data, game):
+		if generate_Data == 0:
+			print("The ghost has absorbed Pacman's soul... You died...\n\n")
 		game.gameOver = True
 
 	def getProgress(self, game):

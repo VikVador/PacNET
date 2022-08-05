@@ -20,12 +20,27 @@ the Pacman game. They will be used to train our PacNET
 import numpy as np
 
 
+# Takes into consideration the walls such that
+# it gives an additionnal information about the possible moves
+def getPositionValue(x, y, walls):
+
+    value = 0
+
+    # Adding value if wall is detected
+    for i in [-1, 1]:
+        for j in [-1, 1]:
+            if walls[x + i][y + j] == True:
+                value += 1
+
+    return value
+
+
 # This function generates the data of a game instance at time t.
 def generateData(state, move):
 
     # Information about the game state
-    walls = state.getWalls()
     foods = state.getFood()
+    walls = state.getWalls()
     g_pos = state.getGhostPosition(1)
     p_pos = state.getPacmanPosition()
 
@@ -53,18 +68,18 @@ def generateData(state, move):
 
             # Ghost
             elif g_pos == (i, j):
-                x[i][j] = 3
+                x[i][j] = 3 + getPositionValue(i, j, walls)
 
             # Pacman
             elif p_pos == (i, j):
-                x[i][j] = 4
+                x[i][j] = 8 + getPositionValue(i, j, walls)
 
             # Empty cell
             else:
-                x[i][j] = 0
+                x[i][j] = 12
 
     # Normalization of the cells
-    x = x/4
+    x = x/12
 
     # Editing the vector to shape it like the actual maze
     x = x.transpose()

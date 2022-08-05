@@ -52,31 +52,30 @@ class PacNET(nn.Module):
         super().__init__()
 
         # Layer - 1
-        self.conv_1 = nn.Conv2d(in_channels = 1, out_channels = 6, padding = 1, kernel_size = (4,4))
+        self.conv_1 = nn.Conv2d(in_channels = 1, out_channels = 32, padding = 1, kernel_size = (3,3))
         self.pool_1 = nn.MaxPool2d(2, 2)
 
         # Layer - 2
-        self.conv_2 = nn.Conv2d(in_channels = 6, out_channels = 16, kernel_size = (4,4))
+        self.conv_2 = nn.Conv2d(in_channels = 32, out_channels = 64, kernel_size = (3,3))
         self.pool_2 = nn.MaxPool2d(2, 2)
 
         # Fully connected layers
-        self.fc1 = nn.Linear(240, 120)
-        self.fc2 = nn.Linear(120, 60)
-        self.fc3 = nn.Linear(60, 4)
+        self.fc1 = nn.Linear(256, 128)
+        self.fc2 = nn.Linear(128, 64)
+        self.fc3 = nn.Linear(64, 4)
 
     def forward(self, x):
-
+        
         # [N, H, W] -> [N, C, H, W]
         x = torch.unsqueeze(x, dim=1)
 
         x = self.pool_1(F.relu(self.conv_1(x)))
         x = self.pool_2(F.relu(self.conv_2(x)))
-        x = torch.flatten(x, 1) # flatten all dimensions except batch
+        x = torch.flatten(x, 1)
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
-        x = self.fc3(x)
-
-        return torch.softmax(x, dim=1)
+        x = torch.softmax(self.fc3(x), dim=1)
+        return x
 
 #----------
 # Functions
