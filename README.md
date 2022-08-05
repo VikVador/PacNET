@@ -6,7 +6,7 @@ Are you bored of playing Pacman by yourself using your keyboard ? This ends now 
 ## Illustration
 |     PacHUMAN     | PacMAN | PacNET |
 |:-:|:-:|:-:|
-|![PacHUMAN](assets/human.gif)|![PacMAN](assets/pacman.gif)|![PacNET](assets/human.gif)|
+|![PacHUMAN](assets/human.gif)|![PacMAN](assets/pacman.gif)|![PacNET](assets/pacnet.gif)|
 
 **NOTE**
 
