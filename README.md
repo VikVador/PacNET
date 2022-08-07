@@ -18,7 +18,7 @@ As of today, PacNET is still a work in progress since the results are not as goo
 - Furthermore, it is needed to install the [*PyTorch*](https://pytorch.org) library as well as [*Numpy*](https://numpy.org). In order to do so, simply execute the command
 
 ```
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Now, you should be setup ! 🎮
